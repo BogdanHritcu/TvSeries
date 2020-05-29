@@ -1,0 +1,58 @@
+/* Horizontal navigation bar*/
+.hnavbar
+{
+    position: sticky;
+    top: 0%;
+    left: 0%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: black;
+}
+
+.hcell
+{
+    display: flex;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    outline: 0px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    background-color: inherit;
+    color: aliceblue;
+}
+
+.hcell > *:not(.ddown)
+{
+    padding: 10px 20px;
+    margin: 0px;
+    border: none;
+    outline: 0px;
+    cursor: inherit;
+    text-decoration: inherit;
+    text-align: inherit;
+    background-color: inherit;
+    color: inherit;
+}
+
+.hcell > *:not(.ddown):hover, .hcell > *:not(.ddown):focus
+{
+    background-color: gray;
+    color: black;
+}
+
+.hcell > *:not(.ddown):active, .hcell .active
+{
+    background-color: firebrick;
+    color: aliceblue;
+}
+
+.hcell.hcellright
+{
+    margin-left: auto;
+}

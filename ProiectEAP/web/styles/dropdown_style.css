@@ -1,0 +1,57 @@
+/* Drop down menu */
+.ddown
+{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left:0%;
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    outline: 0px;
+    cursor: inherit;
+    font: inherit;
+    text-decoration: inherit;
+    text-align: inherit;
+    background-color: inherit;
+    color: inherit;
+}
+
+.hcell_nohov > .ddown
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.hcell:hover .ddown, .searchbar:focus + .ddown
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.hcell:hover .ddown > :not(.searchbar), .searchbar:focus + .ddown > *
+{
+    padding: 10px 20px;
+    margin: 0px;
+    border: none;
+    outline: 0px;
+    cursor: inherit;
+    text-decoration: inherit;
+    text-align: inherit;
+    font: inherit;
+    background-color: inherit;
+    color: inherit;
+}
+
+.hcell:hover .ddown > :not(.searchbar):hover, .hcell:hover .ddown :not(.searchbar):focus, .searchbar:focus + .ddown > *:hover, .searchbar:focus + .ddown > *:focus
+{
+    background-color: gray;
+    color: black;
+}
+
+.hcell:hover .ddown > :not(.searchbar):active, .searchbar + .ddown > *:active
+{
+    background-color: firebrick;
+    color: black;
+}
+

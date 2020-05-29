@@ -1,0 +1,36 @@
+.ltable
+{
+    width: 100%;
+    background-color: black;
+    border-collapse: collapse;
+    margin: 0px;
+    padding: 0px;
+    outline: 0px;
+    border: 0px;
+    overflow-y: scroll;
+}
+
+.ltable td, .ltable th
+{
+    border: 1px solid gray;
+    padding: 10px;
+    text-align: left;
+    color: gray;
+}
+
+.ltable tr:nth-child(even)
+{
+    background-color: aliceblue;
+}
+
+.ltable tr:hover td
+{
+    background-color: gray;
+    color: black;
+}
+
+.ltable th
+{
+    background-color: firebrick;
+    color: aliceblue;
+}

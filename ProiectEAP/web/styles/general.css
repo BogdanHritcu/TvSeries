@@ -1,0 +1,103 @@
+*
+{
+    box-sizing: border-box;
+}
+#search-script
+{
+    display: none;
+    visibility: hidden;
+}
+
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* The grid container */
+.grid-container
+{
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+            'sidenav header header header header header'
+            'sidenav content content content content content'
+            'sidenav content content content content content';
+}
+
+
+/* Style the header */
+.header
+{
+    grid-area: header;
+    background-color: #f1f1f1;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    vertical-align: top;
+}
+
+
+
+/* Style the content */
+.content
+{
+    overflow-y: scroll;
+    grid-column: 2 / span 5;
+}
+
+/* Responsive layout */
+@media (max-width: 600px)
+{
+    .grid-container
+    {
+        grid-template-areas: 'header header header header header header'
+                             'sidenav sidenav sidenav sidenav sidenav sidenav'
+                             'middle middle middle middle middle middle';
+
+    }
+}
+
+/* Style the side navigation */
+.sidenav
+{
+    overflow-y: scroll;
+    grid-area: sidenav;
+    z-index: 1;
+    background-color: #111;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+/* Side navigation links and buttons*/
+.sidenav a, .sidenav button, .sidenav .searchbar
+{
+    color: gray;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color on hover */
+.sidenav a:hover, .sidenav button:hover, .searchbar:focus
+{
+    background-color: #ddd;
+    color: black;
+}
+
+.drop-list *:not(.dropbtn)
+{
+    display: none;
+}
+
+.drop-list:hover *
+{
+    display: block;
+}
+
+.input-text
+{
+
+}
